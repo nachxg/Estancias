@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    color: black;
+    background-image: url('https://news.airbnb.com/wp-content/uploads/sites/4/2019/06/PJM020719Q202_Luxe_WanakaNZ_LivingRoom_0264-LightOn_R1.jpg?fit=2500%2C1666');
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: darken;
+    background-position: center;
+    background-attachment: fixed;
+    transition: background-image 0.5s;
+}
+
+.navbar{
+    top: 0;
+    padding-top: 10px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 15%;
+    font-size: 15px;
+    position: fixed;
+    padding-bottom: 0px;
+    transition: top 0.3s;
+}
+
+.borde{
+    align-self: flex-end;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #96C0B7 33%, #D4DFC7 33%, #D4DFC7 66%, #FEF6C9 66%, #FEF6C9 100%)
+}
+
+.navbar a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    height: auto;
+    font-family: 'Montserrat';
+    font-weight: 100;
+    transition: font-size 0.1s ease;
+}
+
+.navbar a:hover{
+    color: #96C0B7;
+    font-size: 16px;
+}
+
+.navbar h2{
+    font-family: 'Montserrat';
+    align-self: center;
+    font-weight: 600;
+    color: #96C0B7;
+    font-size: 45px;
+}
+
+.navbar h2 svg{
+    transition: color 0.3s ease;
+}
+
+.navbar h2:hover svg{
+    color: rgb(255, 93, 93);
+}
+
+.c{
+    color: #FEF6C9;
+}
+
+.navbar img{
+    height: 45px;
+    width: 42px;
+    margin-right: 10px;
+}
+
+.principal, .clientes, .familias{
+    margin-top: 6%;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+.principal h1, .principal h4, .clientes h1, .clientes h4, .familias h4, .familias h1{
+    font-size: 45px;
+    font-family: 'Montserrat';
+    color: #FEF6C9;
+    width: 30%;
+    margin-left: 7rem;
+    font-weight: 600;
+}
+
+.principal h4, .clientes h4, .familias h4{
+    font-size: 30px;
+    color: #D4DFC7;
+    font-weight: 100;
+}
+
+.clientes{
+    height: 100vh;
+    margin-top: 0;
+}
+
+.familias{
+    height: 100vh;
+    align-items: flex-end;
+}
+
+.familias h1, .familias h4{
+    margin-right: 7rem;
+    margin-left: 0;
+}
+
+.componenteReg{
+    visibility: hidden;
+    padding: 10px;
+    opacity: 0;
+    max-height: 0;
+    transition: max-height 0.3s, opacity 0.3s, visibility 0.3s;
+    position: fixed;
+    border-radius: 10px;
+    top: 75px; /* Ajusta la distancia desde la navbar */
+    width: 20%;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat';
+    border: 3px solid #96C0B7;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: stretch;
+    margin-left: 60.5%;
+}
+
+.componenteReg input, .componenteLogin input{
+    height: 30px;
+    width: 100%;
+    background-color: black;
+    border: 1px solid #96C0B7;
+    color: rgb(255, 255, 255);
+    border-radius: 6px;
+    font-size: 14px;
+    padding-left: 4px;
+}
+
+.componenteReg input::placeholder, .componenteLogin input::placeholder{
+    font-size: 14px;
+    padding: 5px;
+}
+
+.input1, .input2, .input3, .botones, .inputClaveLogin{
+    margin: 7px;
+}
+
+.componenteReg button, .componenteLogin button{
+    height: 35px;
+    border: none;
+    color: rgb(0, 0, 0);
+    border-radius: 6px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.botcliente{
+    background-color: #96C0B7;
+}
+
+.botfamilia{
+    background-color: #FEF6C9;
+}
+
+.regcom{
+    font-size: 14px;
+}
+
+.componenteLogin{
+    visibility: hidden;
+    padding: 10px;
+    opacity: 0;
+    max-height: 0;
+    transition: max-height 0.3s, opacity 0.3s, visibility 0.3s;
+    position: fixed;
+    border-radius: 10px;
+    top: 75px; /* Ajusta la distancia desde la navbar */
+    width: 20%;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat';
+    border: 3px solid #96C0B7;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: stretch;
+    margin-left: 77.5%;
+}
+
+.componenteLogin .inputClaveLogin{
+    position: relative;
+}
+
+.componenteLogin input[type="password"] {
+    padding-right: 35px; /* Deja espacio a la derecha para el icono */
+
+}
+
+.password-toggle {
+    position: absolute;
+    right: 10px;
+    top: 70%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
